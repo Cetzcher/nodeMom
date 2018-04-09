@@ -1,0 +1,46 @@
+{
+  "name": "serverindepth",
+  "version": "1.0.0",
+  "description": "server for handeling messages in a MOM style.",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "flow-remove-types src/ -d _lib/ && babel _lib/ -d lib/ && rm -rf _lib",
+    "start": "nodemon lib/server.js",
+    "server": "nodemon lib/server.js",
+    "client": "nodemon lib/client.js",
+    "flow": "./node_modules/flow-bin/cli.js "
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "Node",
+    "JS",
+    "server"
+  ],
+  "author": "Pierre Rieger (pierre@rieger.solutions)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cetzcher/votem-node-server/issues"
+  },
+  "homepage": "https://github.com/Cetzcher/votem-node-server#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "chai": "^4.1.2",
+    "flow-bin": "^0.66.0",
+    "flow-remove-types": "^1.2.3",
+    "mocha": "^5.0.5",
+    "nodemon": "^1.17.1"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-ws": "^3.0.0",
+    "openpgp": "^2.6.2",
+    "ws": "^4.1.0"
+  }
+}
